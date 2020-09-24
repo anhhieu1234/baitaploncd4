@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ChitietComponent } from './chitiet/chitiet.component';
 import { GiohangComponent } from './giohang/giohang.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GiohangComponent } from './giohang/giohang.component';
     FooterComponent,
     LoginComponent,
     ChitietComponent,
-    GiohangComponent
+    GiohangComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule
