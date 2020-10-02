@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
@@ -8,7 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { ChitietComponent } from './chitiet/chitiet.component';
 import { GiohangComponent } from './giohang/giohang.component';
 import { LogoutComponent } from './logout/logout.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +19,10 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     ChitietComponent,
     GiohangComponent,
-    LogoutComponent,
+    LogoutComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
