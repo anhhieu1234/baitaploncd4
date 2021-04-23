@@ -1,0 +1,216 @@
+ <!--breadcrumbs area start-->
+ <div class="breadcrumbs_area">
+    <div class="container">   
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>My account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>         
+</div>
+<!--breadcrumbs area end-->
+
+<!-- customer login start -->
+<div class="login_page_bg">
+    <div class="container">
+        <div class="customer_login">
+            <div class="row">
+               <!--login area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form login">
+                        <h2>login</h2>
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin(loginForm.value)">
+                            <p>   
+                                <label>Username or email <span>*</span></label>
+                                <input formControlName="username" type="text">
+                                <span class="col alert alert-danger" role="alert"
+                                *ngIf="(loginForm.controls.username?.errors?.required
+                                && loginForm.controls.username?.touched) && loginForm.controls.username?.touched" >
+                                        Tài khoản không được để rỗng!
+                                </span>
+                             </p>
+                             <p>   
+                                <label>Passwords <span>*</span></label>
+                                <input formControlName="password" type="password">
+                                <span class="col alert alert-danger" role="alert"
+                                *ngIf="(!loginForm.controls.password?.errors?.required
+                                && loginForm.controls.password?.touched && loginForm.controls.password?.errors?.minlength) && loginForm.controls.password?.touched">
+                                        Mật khẩu không được để rỗng và độ dài mật khẩu phải lớn hơn 6 ký tự!
+                                </span> 
+                             </p>   
+                            <div class="login_submit">
+                               <a href="#">Lost your password?</a>
+                                <label for="remember">
+                                    <input formControlName="remember" id="remember" type="checkbox">
+                                    Remember me
+                                </label>
+                                <button type="submit">login</button>
+
+                            </div>
+
+                        </form>
+                     </div>    
+                </div>
+                <!--login area start-->
+
+                <!--register area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form register">
+                        <h2>Register</h2>
+                        <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister(registerForm.value)">
+                            <p>   
+                                <label>Email address  <span>*</span></label>
+                                <input formControlName="email" type="text">
+                                <label class="col alert alert-danger" role="alert"
+                                *ngIf="(registerForm.controls.email?.errors?.required
+                                || registerForm.controls.email?.errors?.email) && registerForm.controls.email?.touched " >
+                                        Email là rỗng hoặc không đúng định dạng!
+                                </label>
+                             </p>
+                             <p>   
+                                <label>Passwords <span>*</span></label>
+                                <input formControlName="password" type="password">
+                                <label class="col alert alert-danger" role="alert"
+                                *ngIf="(registerForm.controls.password?.errors?.required
+                                || registerForm.controls.password?.errors?.password) && registerForm.controls.password?.touched" >
+                                        Mật khẩu không được rỗng!
+                                </label>
+                             </p>
+                            <div class="login_submit">
+                                <button type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>    
+                </div>
+                <!--register area end-->
+            </div>   
+        </div>
+    </div>
+</div>
+
+<!-- customer login end -->
+
+<!--brand area start-->
+<div class="brand_area brand_padding">
+    <div class="container">
+        <div class="col-12">
+            <div class="brand_container owl-carousel ">
+                <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand1.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand3.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand4.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand5.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand6.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand7.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand8.jpg" alt=""></a>
+                    </div>
+                </div>
+                 <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand1.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand3.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand4.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="brand_list">
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand5.jpg" alt=""></a>
+                    </div>
+                    <div class="single_brand">
+                        <a href="#"><img src="assets/img/brand/brand6.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--brand area end-->
+
+<!--newsletter area start-->
+<div class="newsletter_area newsletter_padding">
+    <div class="container">
+        <div class="newsletter_inner">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter_container">
+                        <h3>Follow Us</h3>
+                        <p>We make consolidating, marketing and tracking your social media website easy.</p>
+                        <div class="footer_social">
+                           <ul>
+                               <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+                               <li><a class="twitter" href="#"><i class="icon-twitter2"></i></a></li>
+                               <li><a class="rss" href="#"><i class="icon-rss"></i></a></li>
+                               <li><a class="youtube" href="#"><i class="icon-youtube"></i></a></li>
+                               <li><a class="google" href="#"><i class="icon-google"></i></a></li>
+                               <li><a class="instagram2" href="#"><i class="icon-instagram2"></i></a></li>
+                           </ul>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter_container">
+                        <h3>Newsletter Now</h3>
+                        <p>Join 60.000+ subscribers and get a new discount coupon on every Wednesday.</p>
+                        <div class="subscribe_form">
+                            <!-- mailchimp-alerts Start -->
+                            <div class="mailchimp-alerts text-centre">
+                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                            </div><!-- mailchimp-alerts end -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="newsletter_container col_3">
+                        <h3>GET THE APP</h3>
+                        <p>Mazlay App is now available on Google Play & App Store. Get it now.</p>
+                        <div class="app_img">
+                           <ul>
+                               <li><a href="#"><img src="assets/img/icon/icon-app.jpg" alt=""></a></li>
+                               <li><a href="#"><img src="assets/img/icon/icon1-app.jpg" alt=""></a></li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--newsletter area end-->

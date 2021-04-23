@@ -1,31 +1,44 @@
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
-import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
-import { ChitietComponent } from './chitiet/chitiet.component';
-import { GiohangComponent } from './giohang/giohang.component';
-import { LogoutComponent } from './logout/logout.component';
-import { AppRoutingModule } from './app-routing.module';
-
+import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './shared/menu/menu.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+const routes: Routes = [
+  {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then((m) => m.ProductModule),
+  },
+  {
+    path: 'customer',
+    loadChildren: () => import('./customer/customer.module').then((m) => m.CustomerModule),
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  { path: '**', component: NotFoundComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    MainComponent,
-    FooterComponent,
-    LoginComponent,
-    ChitietComponent,
-    GiohangComponent,
-    LogoutComponent,
-  ],
+    MenuComponent,
+    FooterComponent ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

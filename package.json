@@ -1,5 +1,5 @@
 {
-  "name": "cd4",
+  "name": "ban-oto",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -16,10 +16,13 @@
     "@angular/compiler": "~10.0.9",
     "@angular/core": "~10.0.9",
     "@angular/forms": "~10.0.9",
+    "@angular/localize": "^10.0.14",
     "@angular/platform-browser": "~10.0.9",
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "rxjs": "~6.5.5",
+    "rxjs-compat": "^6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
